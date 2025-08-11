@@ -37,7 +37,7 @@ let lastChordTime = 0;
 const chordCooldown = 2000; // 2 seconds between chords
 
 // Background variables
-let change = 0.07;
+let change = 0.03;
 let bgColor = {
     h: 220,
     s: 70,
