@@ -186,7 +186,6 @@ function createStartButton() {
         startButton.style('background-color', '#333333');
         startButton.style('color', 'white');
         startButton.style('border', 'none');
-        startButton.style('border-radius', '6px');
         startButton.style('cursor', 'pointer');
         startButton.mousePressed(startAudio);
     }
