@@ -152,8 +152,8 @@ function setupAudio() {
         wet: 0.2
     });
 
-    const chordGain = new Tone.Gain(0.45);
-    const sawLayerGain = new Tone.Gain(0.1);
+    const chordGain = new Tone.Gain(0.35);
+    const sawLayerGain = new Tone.Gain(0.08);
     const pluckGain = new Tone.Gain(0.4);
 
     pluckSynth.connect(pluckGain);
