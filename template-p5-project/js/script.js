@@ -37,10 +37,10 @@ let lastChordTime = 0;
 const chordCooldown = 2000; // 2 seconds between chords
 
 // Background variables
-let change = 0.5;
+let change = 0.07;
 let bgColor = {
     h: 220,
-    s: 40,
+    s: 70,
     b: 0,
 };
 
@@ -64,6 +64,8 @@ const minBallsForChord = 1;
 
 function setup() {
     createCanvas(500, 500);
+    stroke("white");
+    strokeWeight(5);
     rectMode(CENTER);
     imageMode(CENTER);
     setupAudio();
@@ -71,6 +73,11 @@ function setup() {
 
 function draw() {
     drawBg();
+    stroke("white");
+    strokeWeight(2);
+    noFill();
+    rectMode(CENTER);
+    rect(250, 250, 500, 500);
     spawnBall();
     checkCenterGathering();
     createStartButton();
@@ -295,7 +302,7 @@ function drawBg() {
     colorMode(HSB);
     bgColor.b += change;
 
-    if (bgColor.b > 10 || bgColor.b < 0) {
+    if (bgColor.b > 5 || bgColor.b < 0) {
         change *= -1;
     }
     background(bgColor.h, bgColor.s, bgColor.b);
